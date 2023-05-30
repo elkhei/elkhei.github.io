@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="EL KHEIR INTERNATIONAL GENERAL TRANSPORT AND CONTRACTING" />
+  <meta name="description" content="EL KHEIR INTERNATIONAL GENERAL TRANSPORT AND CONTRACTING" />
+  <meta name="author" content="PN" />
+  <link rel="shortcut icon" href="el-kheir-rbg-p.png" type="">
+
+  <title>EL KHEIR INTERNATIONAL GENERAL TRANSPORT AND CONTRACTING</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="60x60" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="72x72" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="76x76" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="114x114" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="120x120" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="144x144" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="152x152" href="el-kheir-rbg-p.png">
+<link rel="apple-touch-icon" sizes="180x180" href="el-kheir-rbg-p.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="el-kheir-rbg-p.png">
+<link rel="icon" type="image/png" sizes="32x32" href="el-kheir-rbg-p.png">
+<link rel="icon" type="image/png" sizes="96x96" href="el-kheir-rbg-p.png">
+<link rel="icon" type="image/png" sizes="16x16" href="el-kheir-rbg-p.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+    if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+    function mischandler(){
+    return false;
+    }
+    function mousehandler(e){
+    var myevent = (isNS) ? e : event;
+    var eventbutton = (isNS) ? myevent.which : myevent.button;
+    if((eventbutton==2)||(eventbutton==3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    </script>
+</head>
+
+<body >
+
+
+  </div>
+
+ <!-- contact section -->
+ <section class="contact_section layout_padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-5 offset-md-1">
+        <div class="heading_container">
+          <h2>
+            Contact <span>Us</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-5 offset-md-1">
+        <div class="form_container">
+          <form id="submit-form" action="">
+            <div>
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div>
+              <input type="number" name="phone" placeholder="Phone Number" required />
+            </div>
+            <div>
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div>
+              <input type="text" class="message-box" name="message" placeholder="Message" required />
+            </div>
+            <div class="btn_box">
+              <button>
+                SEND
+              </button>
+            </div>
+          </form>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 px-0">
+          <div class="map_container">
+            <div class="map">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $("#submit-form").submit((e)=>{
+    e.preventDefault()
+    $.ajax({
+    url:"https://script.google.com/macros/s/AKfycby61baW1ChfE3Iy8IfBLFSUcnaoeR372OhJxBWgYvG8VVdt06aNVEJS3mli8lQV1tT5nA/exec",
+    data:$("#submit-form").serialize(),
+    method:"post",
+    success:function (response){
+    alert("Your message has been sent. Thank you!")
+    window.location.reload()
+    //window.location.href="https://google.com"
+    },
+    error:function (err){
+    alert("Something Error")
+    
+    }
+    })
+    })
+    </script>
+  <!-- end contact section -->
+
+ 
+        
+          <div class="info_social">
+            <a href="https://api.whatsapp.com/send?phone=&amp;text=" target="_blank">
+              <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://ae.linkedin.com/in/" target="_blank">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+         
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+</body>
+
+</html>

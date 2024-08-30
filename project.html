@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>EL KHEIR INTERNATIONAL GENERAL TRANSPORT AND CONTRACTING</title>
+    <title>AL KHEIR INTERNATIONAL GENERAL TRANSPORT AND CONTRACTING LLC</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
         var isNS = (navigator.appName == "Netscape") ? 1 : 0;
@@ -115,7 +116,7 @@
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="mailto:info@elkheirtransport.com" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="mailto:info@alkheirtransport.com" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -259,27 +260,27 @@
                         <h6 class="text-primary">Free Quote</h6>
                         <h1 class="mb-4">Get A Free Quote</h1>
                         <p class="mb-4 pb-2">We always welcome your comments, queries and suggestions, so feel free too contact us. Please fill out the form below and we will revert back to you.</p>
-                        <form>
+                        <form id="submit-form">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" name="name" placeholder="Your Name" style="height: 55px;" required >
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control border-0" name="email" placeholder="Your Email" style="height: 55px;" required >
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                    <input type="number" class="form-control border-0" name="number" placeholder="Your Mobile" style="height: 55px;" required >
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
+                                    <select class="form-select border-0" name="service" style="height: 55px;" required >
                                         <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                        <option value="1">Transport</option>
+                                        <option value="2">Contracting</option>
+                                        <option value="3">Other</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
+                                    <textarea class="form-control border-0" name="note" placeholder="Special Note"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Submit</button>
@@ -291,6 +292,26 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbwUVN4Pgg03N-cDTHQu5figUUb8PseYpK2YFBBiWijFMYCPprYAFKW4VRLgngIoa4BHmw/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+        success:function (response){
+        alert("Your message has been sent. Thank you!")
+        window.location.reload()
+        //window.location.href="https://google.com"
+        },
+        error:function (err){
+        alert("Something Error")
+        
+        }
+        })
+        })
+        </script>
     <!-- Quote End -->
 
 
@@ -357,7 +378,7 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>ME09, MBZ,
                         Musaffah, Abu Dhabi</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+971 58 622 2910</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@elkheirtransport.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@alkheirtransport.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light btn-social" href="https://api.whatsapp.com/send?phone=971586222910&amp;text=" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
@@ -411,11 +432,11 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2023 <a href="">elkheirtransport</a>, All Right Reserved.
+                        &copy; 2023 <a href="">Alkheir Transport</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                        
-                        Designed By <a href="">elkheirtransport</a>
+                        Designed By <a href="">Alkheir Transport</a>
                     </div>
                 </div>
             </div>
